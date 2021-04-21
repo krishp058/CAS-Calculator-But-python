@@ -1,29 +1,26 @@
-
-
 def start():
-    numbers = input("what are the  numbers you want to calculate seperated by a space: ")
+    numbers = input("What are the numbers do you want to calculate (please seperated by a space): ")
     return numbers
 
 
 def List(rawNumbers):
     formatedNumbers = rawNumbers.split()
     try:
-        formatedResult = [int(formatedNumbers) for formatedNumbers in formatedNumbers]   
+        formatedResult = [int(formatedNumbers) for formatedNumbers in formatedNumbers]
     except:
         print("error: Please input a number")
     return (formatedResult)
-  
+
 
 def operation(inputNumbers):
-    operatation = input("What operation would you like?: ")
-    
+    operatation = input("What operation would you like? (+, -, *, /): ")
+
     result = 0
     result_minus = inputNumbers[0]
     result_times = 1
     result_divide = inputNumbers[0]
-    
-    
-    #operations
+
+    # Operations
     try:
         if operatation == "+":
             for number in inputNumbers:
@@ -37,7 +34,7 @@ def operation(inputNumbers):
 
         elif operatation == "*":
             for number in inputNumbers:
-                result_times *= number 
+                result_times *= number
             print(result_times)
 
         elif operatation == "/":
@@ -45,6 +42,7 @@ def operation(inputNumbers):
                 result_divide /= number
             print(result_times)
     except:
-        print("Error: please enter proper operations or refer back to the list.")
+        print("Error: Please enter proper operations or refer back to the list.")
+
 
 operation(List(start()))
