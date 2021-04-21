@@ -1,3 +1,3 @@
-# Python-playground-lmao
+# CAS-Calculator-But-python
 
-### we made a calculator using python. lol
+### We are making a calculator using python.
