@@ -34,8 +34,8 @@ class CasCalc:
             elif operatation == "/":
                 for number in inputNumbers:
                     result_divide /= number
-                print('Result: {]'.format(result_times))
-        except Exception as e:
+                print('Result: {}'.format(result_times))
+        except Exception:
             print("Error: Please enter proper operations or refer back to the list.")
 
     '''Main method.'''
