@@ -16,30 +16,35 @@ def List(rawNumbers):
 
 def operation(inputNumbers):
     operatation = input("What operation would you like?: ")
-    result = 0
-    result_minus = 0
-    result_times = 1
     
+    result = 0
     result_minus = inputNumbers[0]
+    result_times = 1
+    result_divide = inputNumbers[0]
+    
+    
     #operations
-    if operatation == "+":
-        for number in inputNumbers:
-            result += number
-        print(result)
+    try:
+        if operatation == "+":
+            for number in inputNumbers:
+                result += number
+            print(result)
 
-    elif operatation == "-":
-        for number in inputNumbers[1:]:
-            result_minus -= number
-        print(result_minus)
+        elif operatation == "-":
+            for number in inputNumbers[1:]:
+                result_minus -= number
+            print(result_minus)
 
-    elif operatation == "*":
-        for number in inputNumbers:
-            result_times *= number 
-        print(result_times)
+        elif operatation == "*":
+            for number in inputNumbers:
+                result_times *= number 
+            print(result_times)
 
-    elif operatation == "/":
-        for number in inputNumbers:
-            result_times = inputNumbers[0] / inputNumbers[1] 
-        print(result_times)
+        elif operatation == "/":
+            for number in inputNumbers:
+                result_times /= inputNumbers
+            print(result_times)
+    except:
+        print("Error: please enter proper operations or refer back to the list.")
 
 operation(List(start()))
