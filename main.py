@@ -42,7 +42,7 @@ def operation(inputNumbers):
 
         elif operatation == "/":
             for number in inputNumbers:
-                result_times /= inputNumbers
+                result_divide /= number
             print(result_times)
     except:
         print("Error: please enter proper operations or refer back to the list.")
