@@ -15,20 +15,16 @@ def List(rawNumbers):
   
 
 def operation(inputNumbers):
-  operatation = input("What operation would you like?: ")
+    operatation = input("What operation would you like?: ")
 
-  result = 0
+    result = 0
   #operations
-  if operatation == "+":
-    for number in inputNumbers:
-      result += number
-  print(result)     
-
-  if operatation == "-":
-    for number in inputNumbers:
-
-      result = [ inputNumbers[number] for i in (0, -1) ]
-      result -= number
-      print(result)
-
+    if operatation == "+":
+        for number in inputNumbers:
+            result += number
+        print(result)
+    elif operatation == "-":
+        for number in inputNumbers:
+            result_minus = number[0]
+            result_minus -= number[1:] 
 operation(List(start()))
