@@ -7,9 +7,11 @@ def List(rawNumbers):
     formatedNumbers = rawNumbers.split()
     try:
         formatedResult = [int(formatedNumbers) for formatedNumbers in formatedNumbers]
+        return (formatedResult)
     except:
         print("error: Please input a number")
-    return (formatedResult)
+        return(start())
+    
 
 
 def operation(inputNumbers):
